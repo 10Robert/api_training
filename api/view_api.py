@@ -5,12 +5,13 @@ from .serializers import ApiSerializer, AccountSerializer
 from rest_framework import status
 from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
-
+from rest_framework.renderers import JSONRenderer
 
 class UserListViewSet(viewsets.ModelViewSet):
     queryset = Users.objects.all()
     serializer_class = ApiSerializer
     http_method_names = ['get', 'options', 'head', 'patch', 'post', 'delete']
+    # renderer_classes = [JSONRenderer]
     
     def get_serializer_class(self):
         return super().get_serializer_class()

@@ -23,6 +23,8 @@ class Users(models.Model):
     numero = models.IntegerField()
     habilita = models.BooleanField()
     id_account = models.ManyToManyField(Conta, blank=True, default='')
+    data_create = models.DateTimeField(auto_now_add=True)
+    data_modified = models.DateTimeField(auto_now=True)
     
     def __str__(self) -> str:
         return self.cpf

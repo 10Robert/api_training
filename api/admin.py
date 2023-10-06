@@ -4,7 +4,7 @@ from .models import Users, Conta
 
 @admin.register(Users)
 class UsersAdmin(admin.ModelAdmin):
-    list_display = ['cpf', 'name', 'email', 'numero', 'habilita',]
+    list_display = ['cpf', 'name', 'email', 'numero', 'habilita', 'data_create', 'data_modified']
 
     
 @admin.register(Conta)

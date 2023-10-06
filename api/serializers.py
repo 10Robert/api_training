@@ -27,7 +27,7 @@ class ApiSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Users
-        fields = ['cpf', 'name', 'email', 'numero', 'habilita', 'id_account_objects','id_account','id_account_link']
+        fields = ['cpf', 'name', 'email', 'numero', 'habilita', 'id_account_objects','id_account','id_account_link', 'data_create', 'data_modified']
  
     
 
